@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="perguntas.css">
+</head>
+<body>
+    <script>
+        let acertos = 0;
+
+        let perguntas = [
+                            {
+                             questao: "Qual a capital do Brasil?",
+                             opcao: ["Brasília","São Paulo","Maringá"],
+                             correta: 1
+                            },
+                            {
+                             questao: "Qual a capital do Paraná?",
+                             opcao: ["Londrina","Cuririba","Maringá"],
+                             correta: 2
+                            },
+                            {
+                             questao: "Qual a capital de Goiás?",
+                             opcao: ["Brasília","Palmas","Goiânia"],
+                             correta: 3
+                            },
+                            {
+                             questao: "Qual é o planeta mais próximo do Sol?",
+                             opcao: ["Marte","Terra","Mercúrio"],
+                             correta: 3
+                            },
+                            {
+                             questao: "Qual é o maior oceano do mundo?",
+                             opcao: ["Oceano Índico","Oceano Atlântico","Oceano Pacífico"],
+                             correta: 3 
+                            },
+                            {
+                             questao: "Qual é o maior animal terrestre?",
+                             opcao: ["Elefante","Girafa","Rinoceronte"],
+                             correta: 1 
+                            },
+                            {
+                             questao: "Qual é a capital da França?",
+                             opcao: ["Roma","Paris","Berlim"],
+                             correta: 2 
+                            },
+                            {
+                             questao: "Qual é o resultado da adição de 7 e 5?",
+                             opcao: ["12","35","57"],
+                             correta: 1 
+                            },
+                            {
+                             questao: "Qual é o maior deserto de areia do mundo?",
+                             opcao: ["Deserto do Saara","Deserto da Arábia","Deserto de Gobi"],
+                             correta: 1 
+                            },
+                            {
+                             questao: "Quem pintou a Mona Lisa?",
+                             opcao: ["Vincent van Gogh","Leonardo da Vinci","Pablo Picasso"],
+                             correta: 2 
+                            },
+                            {
+                             questao: "Qual é o maior país do mundo em área territorial?",
+                             opcao: ["China","Canada","Russia"],
+                             correta: 3
+                            },
+                            {
+                             questao: "Qual é a fórmula química da água?",
+                             opcao: ["H2O","CO2","O2"],
+                             correta: 1 
+                            },
+                            {
+                             questao: "Qual é o ponto mais alto do mundo?",
+                             opcao: ["Montanha Everest","Montanha K2","Montanha Kilimanjaro"],
+                             correta: 1 
+                            },
+                            {
+                             questao: "Quem é o criador de FNAF?",
+                             opcao: ["Henry Emily","Scott Cawthon","Willian Afton"],
+                             correta: 2
+                            },
+                            {
+                             questao: "Qual o melhor jogo de toda a história?",
+                             opcao: ["The last of us Part 2","Mineirinho ultra adventures","Red dead redemption 2"],
+                             correta: 1
+                            }
+                        ]
+        for (let i=0; i < 5; i++) {
+            let ale = parseInt(Math.random() *15)
+            let resposta= prompt(perguntas[ale].questao + "\n" +
+                  "1. "+ perguntas[ale].opcao[0] + "\n" +
+                  "2. "+ perguntas[ale].opcao[1] + "\n" +
+                  "3. "+ perguntas[ale].opcao[2]
+            );
+            if (parseInt(resposta) == perguntas[ale].correta){
+                acertos++
+            }
+        }
+        alert(acertos)
+
+        if (acertos<3) {
+            document.querySelector("body").style.backgroundColor="red"
+        }
+        else if (acertos<5){
+            document.querySelector("body").style.backgroundColor="green"
+        }
+        else{
+            document.querySelector("body").style.backgroundColor="blue"
+        }
+    </script>
+</body>
+</html>

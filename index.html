@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let acertos = 0;
+
+        let perguntas = [
+                            {
+                             questao: "Qual a capital do Brasil?",
+                             opcao: ["Brasília","São Paulo","Maringá"],
+                             correta: 1
+                            },
+                            {
+                             questao: "Qual a capital do Paraná?",
+                             opcao: ["Londrina","Cuririba","Maringá"],
+                             correta: 2
+                            },
+                            {
+                             questao: "Qual a capital de Goiás?",
+                             opcao: ["Brasília","Palmas","Goiânia"],
+                             correta: 3
+                            }
+                        ]
+        for (let i=0; i < perguntas.length; i++) {
+            let resposta= prompt(perguntas[i].questao + "\n" +
+                  "1. "+ perguntas[i].opcao[0] + "\n" +
+                  "2. "+ perguntas[i].opcao[1] + "\n" +
+                  "3. "+ perguntas[i].opcao[2]
+            );
+            if (parseInt(resposta) == perguntas[i].correta){
+                acertos++
+            }
+        }
+
+        alert(acertos)
+    </script>
+</body>
+</html>
